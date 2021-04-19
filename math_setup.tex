@@ -1,0 +1,228 @@
+% To write matrix symbols
+\usepackage{dsfont}
+
+% Have a bold symbol for the vectors
+\usepackage{amsmath}
+
+% --- Cross over a math symbol
+%\usepackage[makeroom]{cancel}
+
+% --- Option to have nice matrices
+\usepackage{array}
+
+% Greek math symbols in bold
+%\usepackage{unicode-math}
+
+
+% Nice arrows in mathmode
+\usepackage{marvosym} % \MVRIGHTarrow
+
+% Long right arrow with text
+\usepackage{extarrows}
+
+
+% --- Use SI-units for parameters
+% \usepackage{SIunits}
+% \usepackage{sistyle}
+%\usepackage{siunitx}
+
+
+%%Math shortcuts
+
+%\begin{comment}
+% Norms
+\DeclarePairedDelimiter\abs{\lvert}{\rvert}%
+\DeclarePairedDelimiter\norm{\lvert}{\rvert}%
+\newcommand{\norminf}[1]{\norm{#1}_\infty}
+\newcommand{\dist}{\operatorname{dist}}
+
+% Common sets
+\newcommand{\R}{\mathbb{R}} % Real
+\newcommand{\N}{\mathbb{N}} % Natural
+\newcommand{\Z}{\mathbb{Z}} % Integer
+\newcommand{\V}{\mathbb{V}} % Voronoi partition
+\newcommand{\W}{\mathcal{W}} % Workspace
+%\newcommand{\B}{\mathbb{B}} % Ball
+\newcommand{\X}{\mathcal{X}} % MAS configuration
+
+% Relation Symbols
+\newcommand{\defeq}{\mathop{\vcentcolon=}}
+\newcommand{\eqdef}{\mathop{=\vcentcolon}}
+\newcommand{\meq}{\mathop{\stackrel{!}{=}}}
+
+% Subsets, subspaces and some linear algebra
+\newcommand{\interior}{\operatorname{int}}
+\newcommand{\depth}{\operatorname{depth}}
+\newcommand{\linspan}{\operatorname{span}}
+\newcommand{\conv}{\operatorname{conv}}
+\newcommand{\aff}{\operatorname{aff}}
+\newcommand{\affdim}{\operatorname{affdim}}
+\newcommand{\relint}{\operatorname{relint}}
+\newcommand{\CS}{\operatorname{CS}}
+\newcommand{\image}{\operatorname{image}}
+\newcommand{\row}{\operatorname{row}}
+
+% Special symbols
+\newcommand{\xig}{\bar{x}_i^{\text{g}}}
+
+% Optimization
+\newcommand{\opt}[1]{ #1^\star}
+\newcommand{\argmin}{\arg \min}
+
+% Matrices
+\newcommand{\bmat}[1]{\begin{bmatrix}#1\end{bmatrix}}
+\newcommand{\mmat}[1]{\begin{matrix}#1\end{matrix}}
+\newcommand{\diag}{\mathrm{diag}}
+\newcommand{\rank}{\mathrm{rank}}
+
+% Graph commands
+\newcommand{\Vertices}{\mathcal{V}}
+\newcommand{\Graph}{\mathcal{G}}
+\newcommand{\Edges}{\mathcal{E}}
+\newcommand{\E}{\mathcal{E}}
+
+
+% Common vectors
+\newcommand{\0}{\mymathbb{0}}
+\newcommand{\1}{\mymathbb{1}}
+
+% Some operators
+\newcommand{\average}{\operatorname{average}}
+
+%\end{comment}
+
+%Allow for wider blocks
+\newenvironment<>{varblock}[2][1.1\textwidth]
+{%
+  \setlength{\textwidth}{#1}
+  \begin{actionenv}#3%
+    \def\insertblocktitle{#2}%
+    \par%
+    \usebeamertemplate{block begin}
+  {\par}
+  \usebeamertemplate{block end}%
+  \end{actionenv}
+}
+
+
+
+% -------------------
+% --- Commands for the indices marking
+
+\newcommand*{\tinysup}[1]{\ensuremath{^{\tiny #1}}}
+\newcommand*{\tinysub}[1]{\ensuremath{_{\tiny #1}}}
+\newcommand*{\supt}[1]{\ensuremath{^{\tiny #1}}}
+\newcommand*{\subt}[1]{\ensuremath{_{\tiny #1}}}
+
+
+% Derivative in point notation
+\newcommand{\at}[2][]{#1\big|_{#2}}
+% \newcommand\at[2]{\left.#1\right|_{#2}}
+
+
+
+% Defining the normal-symbol
+\newcommand{\normal}[1]{\lvert #1 \rvert}
+
+%Parallel sign:
+\newcommand{\parallelsum}{\mathbin{\|}}
+
+%Question mark over equal sign:
+\newcommand{\?}{\stackrel{\color{red}?\color{black}}{=}}
+
+
+% --- Spherical harmonics and the potential functions
+
+\newcommand{\shm}[2]{Y \subt{#1}\supt{#2}\left(\theta,\phi\right)}
+ \newcommand{\shmN}[3]{Y \subt{#1}\supt{#2}\left(\theta_{#3},\phi_{#3}\right) }
+  \newcommand{\shmc}[2]{\left[ Y \subt{#1'}\supt{#2'}\!\left(\theta,\phi\right) \right]^{\ast}}
+
+ \newcommand{\christoffel}[3]{\ensuremath{\Gamma\supt{#1#2}\subt{#3}}}
+
+
+\newcommand{\sphm}[2]{Y \subt{#1}\supt{#2}\left(\arccos\eta,\phi\right)}
+
+
+% New definition of the electrostatic potential
+\newcommand{\elPot}{\ensuremath{\psi\!\left(\mathbf{r}|\omega\right)}}
+\newcommand{\elPotN}[1]{\ensuremath{\psi_{#1}\!\left(\mathbf{r}|\omega\right)}}
+
+\newcommand{\elInc}{\ensuremath{\psi_{inc}\!\left(\mathbf{r}|\omega\right)}}
+
+\newcommand{\elIncN}[1]{\ensuremath{\psi_{inc}^{(#1)}\!\left(\mathbf{r}|\omega\right)}}
+
+
+\newcommand{\elTr}{\ensuremath{\psi_{tr}\!\left(\mathbf{r}|\omega\right)}}
+
+\newcommand{\elTrN}[1]{\ensuremath{\psi_{tr}^{(#1)}\!\left(\mathbf{r}|\omega\right)}}
+
+\newcommand{\elCons}[1]{\ensuremath{\psi_{0}^{(#1)}(\omega)}}
+
+%Command for writing SH-integral
+% \newcommand{\shInt}[2]{\ensuremath{\int_{#1}^{#2}\text{d}(\cos\theta)\int_0^{2\pi}\text{d}\phi}}
+
+\newcommand{\shInt}[2]{\ensuremath{\int_{#1}^{#2}\text{d}\Omega}}
+
+
+
+%--- Command for the lm'th multipole coefficient
+\newcommand{\A}{\ensuremath{A_{\ell m}(\omega)}}
+
+\newcommand{\An}[1]{\ensuremath{A_{\ell m}^{(#1)}(\omega)}}
+\newcommand{\AnBar}[1]{\ensuremath{\bar{A}_{\ell m}^{(#1)}(\omega)}}
+
+\newcommand{\B}{\ensuremath{B_{\ell m}(\omega)}}
+\newcommand{\Bn}[1]{\ensuremath{B_{\ell m}^{(#1)}(\omega)}}
+\newcommand{\BnBar}[1]{\ensuremath{\bar{B}_{\ell m}^{(#1)}(\omega)}}
+
+\newcommand{\Bprime}{\ensuremath{B_{\ell^\prime m^\prime}(\omega)}}
+
+
+
+
+%e:
+\newcommand{\e}{\mathrm{e}}
+
+%Make the \vec command to bold-math symbol
+\renewcommand{\vec}[1]{\boldsymbol{\mathbf{#1}}}
+% --- Define \dvec and \ddvec for dotted and double-dotted vectors.
+
+
+
+% The infinitessimal symbol
+
+\newcommand{\dx}[1][]{%
+ %  \ifthenelse{ \equal{#1}{} }
+  %    {\ensuremath{\;\mathrm{d}x}}
+      {\ensuremath{\;\mathrm{d}#1}}
+}
+
+
+% Tensor symbol
+\DeclareFontFamily{OMS}{oasy}{\skewchar\font48 }
+\DeclareFontShape{OMS}{oasy}{m}{n}{%
+         <-5.5> oasy5     <5.5-6.5> oasy6
+      <6.5-7.5> oasy7     <7.5-8.5> oasy8
+      <8.5-9.5> oasy9     <9.5->  oasy10
+      }{}
+\DeclareFontShape{OMS}{oasy}{b}{n}{%
+       <-6> oabsy5
+      <6-8> oabsy7
+      <8->  oabsy10
+      }{}
+\DeclareSymbolFont{oasy}{OMS}{oasy}{m}{n}
+\SetSymbolFont{oasy}{bold}{OMS}{oasy}{b}{n}
+
+\DeclareMathSymbol{\smallleftarrow}     {\mathrel}{oasy}{"20}
+\DeclareMathSymbol{\smallrightarrow}    {\mathrel}{oasy}{"21}
+\DeclareMathSymbol{\smallleftrightarrow}{\mathrel}{oasy}{"24}
+
+
+\newcommand{\tensor}[1]{\overset{\scriptscriptstyle\smallleftrightarrow}{#1}}
+
+
+\newcommand{\vectens}[1]{\overset{\scriptscriptstyle\smallrightarrow}{#1}}
+
+%Set color around equations
+% \newcommand{\boxedeq}[2]{\begin{empheq}[box={\fboxsep=6pt\fbox}]{align}\label{#1}#2\end{empheq}}
+% \newcommand{\coloredeq}[2]{\begin{empheq}[box=\colorbox{my_raspberry}]{align}\label{#1}#2\end{empheq}}

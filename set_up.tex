@@ -1,0 +1,610 @@
+\usepackage[utf8]{inputenc}
+\usepackage{amsmath}
+\usepackage{amsthm}
+
+% to comment out code
+\usepackage{comment}
+
+%% Colors
+%% ------
+
+\definecolor{sg_blue}{RGB}{0, 149, 212}
+\definecolor{sg_darkblue}{RGB}{23, 66, 140}
+\definecolor{sg_green}{RGB}{79, 176, 181}
+\definecolor{sg_orange}{RGB}{237, 102, 8}
+\definecolor{sg_red}{RGB}{227, 0, 59}
+
+\definecolor{my_purple}{RGB}{158, 93, 182}
+\definecolor{my_nightblue}{RGB}{0, 55, 123}
+\definecolor{my_blue}{RGB}{80, 130, 220}
+\definecolor{my_duck}{RGB}{0, 125, 172}
+\definecolor{my_turquoise}{RGB}{0, 140, 125}
+\definecolor{my_forest}{RGB}{20, 150, 50}
+\definecolor{my_apple}{RGB}{90, 180, 50}
+\definecolor{my_yellow}{RGB}{249, 190, 36}
+\definecolor{my_orange}{RGB}{255, 120, 15}
+\definecolor{my_red}{RGB}{250, 50, 10}
+\definecolor{my_raspberry}{RGB}{248, 15, 80}
+\definecolor{my_brown}{RGB}{150, 95, 50}
+
+\definecolor{my_lightgray}{RGB}{160, 160, 160} % before 200 200 200
+\definecolor{my_black}{RGB}{10, 10, 10}
+\definecolor{my_gray}{RGB}{100, 100, 100}
+\definecolor{my_darkgray}{RGB}{50, 50, 50}
+\definecolor{my_white_back}{RGB}{247, 247, 247}
+\definecolor{my_white_edge}{RGB}{253, 253, 253}
+
+% Colors meaning
+% --------------
+
+\definecolor{water}{named}{my_blue}
+\colorlet{ethanol}{my_blue!50!my_raspberry}
+\colorlet{propylene}{my_blue!50!my_forest}
+\definecolor{dowfax}{named}{my_raspberry}
+\definecolor{sds}{named}{my_nightblue}
+%\definecolor{my_main}{named}{my_lightgray}
+\definecolor{my_main}{named}{my_nightblue}
+%\definecolor{my_main}{named}{sg_blue}
+\colorlet{mixture}{water!50!propylene}
+
+%% Beamer modifications
+%% --------------------
+
+% Use of the colors by beamer
+% ---------------------------
+
+\setbeamercolor{normal text}{fg=my_darkgray}
+% To have a different back color for the picture
+%\setbeamercolor{normal text}{fg=my_darkgray, bg=my_white_back}
+\setbeamercolor{frametitle}{fg=my_nightblue}
+\setbeamercolor{item}{fg=my_nightblue}
+\setbeamercolor{framesubtitle}{fg=my_darkgray}
+\setbeamercolor{pagenumber}{fg=my_darkgray}
+
+% \setbeamercolor{normal text}{fg=my_darkgray, bg=my_white_back}
+% \setbeamercolor{frametitle}{fg=my_darkgray}
+% \setbeamercolor{item}{fg=my_darkgray}
+% \setbeamercolor{framesubtitle}{fg=my_darkgray}
+% \setbeamercolor{pagenumber}{fg=my_darkgray}
+
+
+\setbeamercolor{alerted text}{fg=my_main}
+\setbeamercolor{example text}{fg=my_raspberry}
+\setbeamercolor{structure}{fg=my_main}
+\setbeamercolor{background canvas}{parent=normal text}
+%\setbeamercolor{background canvas}{parent=white}
+\setbeamercolor{background}{parent=white}
+%\setbeamercolor{background}{parent=background canvas}
+
+\usefonttheme{default}
+% font themes: default, professionalfonts, serif,
+% structurebold, structureitalicserif, structuresmallcapsserif
+
+% Add frame number in the navigation symbol
+% -------------------
+\setbeamertemplate{navigation symbols}{}
+%\addtobeamertemplate{navigation symbols}{}{%
+%	\usebeamerfont{footline}%
+%	\usebeamercolor[fg]{footline}%
+%	\hspace{1em}%
+%	\insertframenumber/\inserttotalframenumber
+%}
+
+% New colors / from Franck
+% ----------
+
+%\newcommand{\greyemph}[1]{\textcolor{gray}{#1}}
+%\newcommand{\dgreyemph}[1]{\textcolor{darkgray}{#1}}
+%\newcommand{\citeemph}[1]{{\footnotesize \dgreyemph{[#1]}}}
+%\newcommand{\defemph}[1]{{\usebeamercolor[fg]{frametitle} #1}}
+%\newcommand{\remph}[1]{{\usebeamercolor[fg]{alerted text} #1}}
+
+% Numbering and items
+% -------------------
+
+%\setbeamertemplate{footline}[frame number]
+%\setbeamertemplate{itemize item}[circle]
+%\setbeamertemplate{itemize subitem}[circle]
+
+
+
+
+\usepackage[parfill]{parskip}
+\usepackage[section]{placeins}
+\usepackage{graphicx}
+
+
+
+
+%To scale the footnote size properly
+\usepackage{mathptmx}
+\usepackage{anyfontsize}
+\usepackage{t1enc}
+
+%% Math imports
+\usepackage{mathtools}
+\usepackage{amsmath}
+\usepackage{amsfonts}
+\usepackage{amssymb}
+\usepackage{soul}
+
+\usepackage{setspace}
+\usepackage{color}
+\usepackage{listings}
+
+%Add latex_code to the document
+
+
+
+
+
+%\usepackage[marginparwidth=3cm]{geometry}
+%\usepackage{marginnote}
+\DeclareMathAlphabet{\mymathbb}{U}{bbold}{m}{n}
+
+%To set the usetheme and the colors
+%\usetheme{Madrid}
+%\usetheme{default}
+
+%Set the colors
+%\usecolortheme{rose}
+% color themes: albatross, beaver, beetle, crane, default, dolphin, dov, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
+
+%Set the text style
+%\usefonttheme{serif}
+% font themes: default, professionalfonts, serif, structurebold, structureitalicserif, structuresmallcapsserif
+
+%If you want to change the text colors again
+% \setbeamercolor{normal text}{fg=black,bg=white}
+% \setbeamercolor{pagenumber}{fg=pagenumbercolor}
+% \setbeamercolor{alerted text}{fg=red}
+% \setbeamercolor{example text}{fg=blue!50!white}
+% \setbeamercolor{structure}{fg=blue!70!white}
+% \setbeamercolor{background canvas}{parent=normal text}
+% \setbeamercolor{background}{parent=background canvas}
+% \setbeamercolor{framesource}{fg=black}
+% \setbeamerfont{framesource}{size=\small}
+
+%\input{math_setup.tex}
+
+%Add pagenumering
+% \beamertemplatenavigationsymbolsempty
+% \addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
+%   \insertframenumber / \inserttotalframenumber }
+
+%% Bibliography
+%\usepackage[backend=biber,style=ieee]{biblatex}
+%\bibliography{manual}
+
+% % To show references on the same slide:
+% \usepackage[backend=bibtex]{biblatex}
+
+% \makeatletter
+% \def\blx@maxline{77}
+% \makeatother
+
+% % Resset footnote to be showed on each slide
+%  \let\oldfootnote\footnote
+% \renewcommand\footnote[1][]{\oldfootnote[frame,#1]}
+% \makeatother
+
+% % Use square-parenthesis as mark
+% \makeatletter
+% \renewcommand\@makefnmark{\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
+% \renewcommand\@makefntext[1]{\fontsize{4}{5}\selectfont {\usebeamercolor[fg]{footnote
+%       mark}\usebeamerfont*{footnote
+%       mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
+% \makeatother
+
+
+
+% To show references on the same slide:
+\usepackage[backend=bibtex]{biblatex}
+
+\makeatletter
+\def\blx@maxline{77}
+\makeatother
+
+% Resset footnote to be showed on each slide
+ \let\oldfootnote\footnote
+\renewcommand\footnote[1][]{\oldfootnote[frame,#1]}
+\makeatother
+
+% Use square-parenthesis as mark
+\makeatletter
+\renewcommand\@makefnmark{\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
+\renewcommand\@makefntext[1]{\fontsize{4}{5}\selectfont {\usebeamercolor[fg]{footnote
+      mark}\usebeamerfont*{footnote
+      mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
+\makeatother
+
+
+
+% \let\svthefootnote\thefootnote
+% \textheight 1in
+% \newcommand\blankfootnote[1]{%
+%   \let\thefootnote\relax\footnotetext{#1}%
+%   \let\thefootnote\svthefootnote%
+% }
+
+
+
+
+
+% % Use square-parenthesis as mark
+% \makeatletter
+% \renewcommand\@makefnmark{\hbox{\@textsuperscript{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}}
+% \renewcommand\@makefntext[1]{\@textsuperscript{\usebeamercolor[fg]{footnote
+%       mark}\usebeamerfont*{footnote
+%       mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
+% \makeatother
+
+
+
+% --- Add predefined colors
+\usepackage{xcolor}
+%\usepackage{listings}
+\lstset
+{
+    language=[LaTeX]TeX,
+    breaklines=true,
+    basicstyle=\tt\scriptsize,
+    keywordstyle=\color{my_black},
+    identifierstyle=\color{my_nightblue},
+    basicstyle=\footnotesize %\tiny, %or \small or \footnotesize etc.
+}
+
+%Add tikz functionlaity to the document
+% \usepackage{tikz}
+% \usepackage{showexpl}
+% \lstset{
+%     language=[LaTeX]TeX,
+%     breaklines=true,
+%     basicstyle=\tt\scriptsize,
+%     keywordstyle=\color{blue},
+%     identifierstyle=\color{magenta},
+% }
+
+%Set nice figures
+\usepackage{graphicx}
+%\usepackage{subcaption}
+
+\usepackage{calc} % Allow use of mathematical expressions to set lenght units etc.
+\usepackage{url} % Break long urls over several lines
+
+
+\usepackage{pgfplots}
+\pgfplotsset{compat=newest}
+
+%% Tikz
+\usepackage{tikz,overpic}
+\usetikzlibrary{fit,shapes.misc}
+\usetikzlibrary{plotmarks}
+
+
+%set the arrow style
+\tikzset{>=latex}
+\usetikzlibrary{arrows.meta,positioning,decorations.markings,backgrounds}
+%\usetikzlibrary{arrows.meta}
+\usepgfplotslibrary{patchplots}
+\usepackage{grffile}
+\pgfplotsset{plot coordinates/math parser=false}
+\setbeamercovered{dynamic}
+
+% Figure width parameter
+\newlength\fwidth
+\newlength\fheight
+
+% Allow tables
+\usepackage{multirow}
+
+
+
+%% Packages
+%% --------
+
+\usepackage[utf8]{inputenc}
+\usepackage[english]{babel}
+\usepackage{multicol}
+\usepackage{setspace}
+
+\usepackage{amsmath,amssymb,amsfonts}
+\usepackage{mathrsfs}
+
+%\usepackage{eurosym}
+\usepackage[autolanguage]{numprint}
+\usepackage[squaren,Gray]{SIunits}
+\usepackage{textcomp}
+
+\usepackage{graphicx} % trim = {left, lower, right, upper}
+%\usepackage{wrapfig}
+% \usepackage{caption}
+% \usepackage{subcaption}
+% \usepackage{subfigure} is an old package
+% \usepackage{subcaption} is not compatible with all beamer version
+%\usepackage{subfig} % is supposed to be the best, but its use is different
+
+\usepackage[skip=0.01pt]{caption} % example skip set to 2pt
+%\usepackage{caption}
+\captionsetup{labelformat=empty,labelsep=none}
+\usepackage[skip=0.01pt]{subcaption}
+\usepackage{capt-of}
+\captionsetup[subfigure]{labelformat = parens, labelsep = space, labelfont=bf}
+\captionsetup[sub]{labelsep=newline}
+\setbeamertemplate{caption}[numbered]
+     %Change the subcaptions to capital letters
+%\renewcommand{\thesubfigure}{\Alph{subfigure}}
+%\usepackage{graphicx,subcaption}
+\newcommand\newsubcap[1]{\phantomcaption%
+       \caption*{\figurename~\thefigure(\thesubfigure): #1}}
+
+\setbeamercovered{dynamic}
+
+\captionsetup[subfigure]{labelformat=empty}
+
+
+
+
+%\usepackage[colorlinks]{hyperref}
+\usepackage{hyperref}
+\usepackage{animate}[2017/05/18]
+%\setbeamercovered{dynamic} % not yet displayed objects are transparent: does not work with images.
+\usepackage{xparse} %if in function
+%\usepackage{psnfss}
+\usepackage[export]{adjustbox}
+
+\usepackage{appendixnumberbeamer}
+
+% Franck packages
+% ----------------
+
+%\usepackage{ae, aeguill}
+%\usepackage{stmaryrd}
+%\usepackage{times} % times font (larger than standard)
+%\usepackage{color}
+%\usepackage{enumerate}
+%\usepackage[all]{xy}    % for commutative diagrams
+%\usepackage{pgf, pgfarrows, pgfautomata, pgfheaps, pgfnodes, pgfshade}
+%\usepackage{multimedia}   % for embedding movies
+%\usepackage{symbmath}
+%\usepackage{ifthen}
+%\usepackage[FIGTOPCAP]{subfigure}
+%\usepackage{pifont}
+
+
+
+% Introduction des logos
+% ----------------------
+
+\logo{
+%	\begin{columns}
+%		\hspace{-32pt}
+%		\column[b]{0.65\paperwidth}
+		%\scalebox{0.8}{\textcolor{my_lightgray}{SVI - CONFIDENTIAL Disclosure or reproduction without prior written permission of Saint-Gobain Research Paris is prohibited}}
+%		\column[b]{0.035\paperwidth}
+		%\putscale(3){logos/Logos}{0.13}
+	%	\vspace{-3pt}
+%		\column[b]{0.11\paperwidth}
+		%\includegraphics[page=5]{logos/Logos}
+	%	\vspace{-8pt}
+%		\column[b]{0.1\paperwidth}
+		{\scriptsize \hyperlink{tableofcontent}{\textcolor{my_darkgray}{\insertframenumber/\inserttotalframenumber}}}
+%	\end{columns}
+	\vspace{-5pt}
+}
+
+% Background
+% ----------
+
+%\setbeamertemplate{background}% {
+% \ifthenelse{\value{page}=1}{
+% \includegraphics[page=7]{logos/Logos}
+% }
+% %  \includegraphics{}
+% % }
+% %else
+% %	{}%\hspace{0.5cm}\includegraphics[width=0.06\paperwidth, page=6]{logos/Logos}}
+% }
+
+% %\setbeamertemplate{frametitle}{
+% %	\vspace{0.2cm}\hspace{0.45cm} \insertframetitle
+% %}
+
+% \setbeamertemplate{frametitle}{
+%  % \vspace{0.2cm}
+%   \insertframetitle
+% }
+
+%% New commands
+%% ------------
+
+\DeclareMathOperator{\grad}{\nabla}
+\DeclareMathOperator{\dive}{\nabla\cdot}
+\DeclareMathOperator{\rot}{rot}
+\DeclareMathOperator{\laplacien}{\Delta}
+
+%\newcommand{\paragraphtitle}[1]{{\large #1 \smallskip}}
+\newcommand{\paragraphtitle}[1]{{\hspace{-0.35cm} \large #1 \smallskip}}
+\newcommand{\semitransp}[2][35]{{\color{fg!#1}#2}}
+\newcommand{\setframetitle}{\hspace{-0.35cm}\semitransp[50]{\insertsectionhead{}\newline $\blacktriangleright{}$}\insertsubsectionhead{}\vspace{0.2cm}}
+
+\newcommand{\dev}{\text{d}}
+\newcommand{\deriv}[2]{\frac{\dev #1}{\dev #2}}
+\newcommand{\depar}[2]{\frac{\partial #1}{\partial #2}}
+\newcommand{\delag}[2]{\frac{\mathcal{D} #1}{\mathcal{D} #2}}
+\renewcommand{\vec}[1]{\mathbf{#1}}
+\newcommand{\mat}[1]{\underline{\underline{#1}}}
+
+\newcommand{\ind}[1]{_\text{#1}}
+\newcommand{\expo}[1]{^\text{#1}}
+\renewcommand{\thefootnote}{\arabic{footnote}}
+\newcommand{\val}[2]{\numprint{#1}~\text{#2}}
+
+\newcommand{\para}{\medbreak\par}
+\renewcommand{\epsilon}{\varepsilon}
+\renewcommand{\phi}{\varphi}
+\newcommand{\up}{\textsuperscript}
+
+\newcommand{\aaj}[1]{\textcolor{red}{[#1]}}
+\newcommand{\mycite}[1]{
+	{\footnotesize \par \textcolor{my_main}{#1} \par}
+	\vspace{-2pt}}
+
+\DeclareDocumentCommand \putput { d[] d[] d() m m } {%
+	\IfNoValueTF{#3}{%
+		\includegraphics[width=#5\textwidth]{#4}%
+	}{%
+		\includegraphics[page=#3, width=#5\textwidth]{#4}%
+	}%
+	\IfNoValueTF{#1}{}{\caption{#1}}
+	\IfNoValueTF{#2}{}{\label{#2}}
+}
+
+\DeclareDocumentCommand \putscale { d<> d<> d() m m } {%
+	\IfNoValueTF{#3}{%
+		\includegraphics[scale=#5]{#4}%
+	}{%
+		\includegraphics[page=#3, scale=#5]{#4}%
+	}%
+	\IfNoValueTF{#1}{}{\caption{#1}}
+	\IfNoValueTF{#2}{}{\label{#2}}
+}
+
+\DeclareDocumentCommand \video { d[] d[] m m m m m } {%
+	% graphics option, video options, speed, start, end, best, name
+	\ifthenelse{\final=1}{% video
+		\animategraphics[#1, #2]{#3}{#7}{#4}{#5}%
+	}{%image
+		\includegraphics[#1, clip]{#7#6}%
+	}%
+}%
+
+\newcommand{\cfbox}[1]{%
+	\colorlet{currentcolor}{.}%
+	{\color{my_gray}%
+		\fbox{#1}}%
+}%
+
+\DeclareDocumentCommand \videobox { d[] d[] m m m m m } {%
+	% graphics option, video options, speed, start, end, best, name
+	\ifthenelse{\final=1}{% video
+		\cfbox{\animategraphics[#1, #2]{#3}{#7}{#4}{#5}}%
+	}{%image
+		\cfbox{\includegraphics[#1, clip]{#7#6}}%
+	}%
+}%
+
+\newcommand{\ar}{$\blacktriangleright$}
+
+\newcommand{\liquid}[1]{\textcolor{mixture}{#1_{\mathcal{L}}}}
+\newcommand{\evapliquid}[1]{\textcolor{water}{#1_{\mathcal{L}_1}}}
+\newcommand{\notevapliquid}[1]{\textcolor{propylene}{#1_{\mathcal{L}_2}}}
+\newcommand{\vapor}[1]{\textcolor{my_purple}{#1_{\mathcal{V}}}}
+
+\newcommand{\setnormalfigurespace}{
+	\setlength{\topsep}{5pt}
+	\setlength{\abovecaptionskip}{5pt}
+	\setlength{\belowcaptionskip}{0pt}
+}
+
+\setnormalfigurespace{}
+\setlength{\parindent}{0cm}
+
+\setlength{\fboxsep}{0.1pt}%
+\setlength{\fboxrule}{0.2pt}%
+
+
+%\usepackage{enumitem}
+%\setlist[itemize]{leftmargin=*}
+
+
+
+
+
+%Use tikz to scale credit label
+%\usepackage{tikz}
+\usetikzlibrary{mindmap,trees,shadows}
+\usetikzlibrary{calc}
+\tikzset{credit/.style={
+    append after command={
+      let \p1=($(\tikzlastnode.north east)-(\tikzlastnode.north west)$) in
+      node[anchor=north east,align=right,text width=\x1,font=\footnotesize,
+        node contents={\scalebox{0.45}{Credit:~\textit{#1}}}, at = (\tikzlastnode.south east)]
+
+    }
+  }
+}
+\def\myimage#1#2#3{\tikz\node[inner sep=0,credit={#3}]{\includegraphics[#1]{#2}};}
+
+\def\myimageCopy#1#2#3{\tikz\node[inner sep=0,credit={#3}]{\includegraphics[#1]{#2}};}
+
+
+
+
+% To make a colored box around the text:
+\usepackage[framemethod=TikZ]{mdframed}
+\usepackage{lipsum}
+\mdfdefinestyle{MyFrame}{%
+    linecolor=my_raspberry,
+    outerlinewidth=2pt,
+    roundcorner=1pt,
+    innertopmargin=\baselineskip,
+    innerbottommargin=\baselineskip,
+    innerrightmargin=2pt,
+    innerleftmargin=2pt,
+    backgroundcolor=white}
+
+
+%Set footnote without marker for the last slide:
+%To reset the footnote counter in the last slide
+%\usepackage{perpage}
+\usepackage{appendixnumberbeamer}
+
+
+% appendixframe includes a hyperlink to the frame labeled ‘questions’.
+% The ‘\vskip’ commands are only included so that this button always
+% appears on the bottom of the frame.
+\newenvironment{appendixframe}[1]
+  {\begin{frame}[environment=appendixframe]\frametitle{#1}}
+  {\vskip0ptplus1filll%
+    \hyperlink{questions}{\beamerreturnbutton{Return}}%
+    \vskip2ex\end{frame}}
+
+
+
+% %Redefine the footnote command to have a non-numbering option
+% \let\svthefootnote\thefootnote
+% \textheight 1in
+% \newcommand\blankfootnote[1]{%
+%   \let\thefootnote\relax\footnotetext{#1}%
+%   \let\thefootnote\svthefootnote%
+% }
+% \let\svfootnote\footnote
+% \renewcommand\footnote[2][?]{%
+%   \if\relax#1\relax%
+%     \blankfootnote{#2}%
+%   \else%
+%     \if?#1\svfootnote{#2}\else\svfootnote[#1]{#2}\fi%
+%   \fi
+% }
+
+
+%Add text in bottom of slide:
+
+\newcommand{\btVFill}{\vskip0pt plus 1filll}
+
+
+%Italic font style
+\newcommand*\latin[1]{\textit{#1}}
+
+
+% Usepackage to cancel mathematical expressions
+\usepackage{cancel}
+
+%To color cancel in red:
+\newcommand\Ccancel[2][red]{\renewcommand\CancelColor{\color{#1}}\xcancel{#2}}
+
+
+
+% --- Bold math symbol
+\usepackage{bm}
