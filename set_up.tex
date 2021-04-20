@@ -310,10 +310,12 @@
 
 \usepackage{amsmath,amssymb,amsfonts}
 \usepackage{mathrsfs}
+\usepackage{anyfontsize}
 
 %\usepackage{eurosym}
 \usepackage[autolanguage]{numprint}
-\usepackage[squaren,Gray]{SIunits}
+\usepackage{SIunits}
+%\usepackage[squaren,Gray]{SIunits}
 \usepackage{textcomp}
 
 \usepackage{graphicx} % trim = {left, lower, right, upper}
@@ -355,6 +357,13 @@
 
 \usepackage{appendixnumberbeamer}
 
+\usepackage{xpatch} % Increase vertical spacing between items
+\xpatchcmd{\itemize}
+  {\def\makelabel}
+  {\setlength{\itemsep}{5ex}\def\makelabel}
+  {}
+  {}
+
 % Franck packages
 % ----------------
 
@@ -363,6 +372,7 @@
 %\usepackage{times} % times font (larger than standard)
 %\usepackage{color}
 %\usepackage{enumerate}
+%\setlist{nosep} % or \setlist{noitemsep} to leave space around whole list
 %\usepackage[all]{xy}    % for commutative diagrams
 %\usepackage{pgf, pgfarrows, pgfautomata, pgfheaps, pgfnodes, pgfshade}
 %\usepackage{multimedia}   % for embedding movies
