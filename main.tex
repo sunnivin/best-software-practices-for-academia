@@ -7,7 +7,7 @@
 
 
 % Include the graphics path for the illustrations:
-\graphicspath{{/home/sunniva/Documents/phd/tex/figures/}}
+\graphicspath{{/home/sunnivin/Documents/tex/figures/}}
 
 % Set frametitle in each slide
 \setbeamertemplate{frametitle}{
@@ -31,11 +31,11 @@
 % Allow tabels
 \usepackage{multirow}
 
-% Bibliography
-% \bibliographystyle{aipauth4-1}
+% Bibliographyci
+\bibliographystyle{aipauth4-1}
 %\bibliographystyle{apalike}
-\bibliography{bib/books,bib/articles}
-%\bibliography{bib/articles}
+%\bibliography{bib/books,bib/articles}
+\bibliography{bib/urls}
 
 % Define the accents
 \usepackage{selinput}
@@ -75,64 +75,43 @@
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 % Title page information:
-\title{%\color{my_gray}
- Introduction to scientific computing at MetOs}
- \subtitle{\color{my_gray} }
+\title{Best software engineering practices, why should academia care?}
+ %\subtitle{\color{my_gray}   }
  \institute{
-  Technical workshop day 1\\
+A Lavterskel talk \\
+\\
+ Meteorology and Oceanography
   % \color{my_lightgray}
   % \vspace{-0.2cm} \tiny  Institut des Nanosciences de Paris (INSP)
   % \hspace{1.0cm} Surface du Verre et Interfaces (SVI)}
  }
 
- \author{
-%   % \color{my_lightgray}
-% %  \vspace{-1.cm}
-% %  \begin{tabbing}
-%    % \tiny
-%    % \small {\color{white}Author:}  \= \small \hspace{1.2cm}
-   Dr. Sunniva Indrehus%, INSP/SVI \\
-%    %  \color{white}  \small Supervisors: \> \small \hspace{0.8cm}\\
-%    %   \color{white}  \small Supervisors: \> \small \hspace{0.8cm}\\
-%    %  % \tiny
-%    % \small Supervisors: \> \small \hspace{0.8cm} Ingve SIMONSEN, Professor SVI/NTNU \\
-%    % \> \small   \hspace{0.8cm} Rémi LAZZARI, Director of research CNRS INSP\\
-%    %  \> \small \hspace{0.8cm} Iryna GOZHYK, Research engineer SVI
-%  % \end{tabbing}
+ \author{Sunniva Indrehus }
+
+
+ \date{\scriptsize April 21, 2021}
+
+ % Include all logos
+ \vspace{-2.cm}
+ \titlegraphic{
+%\centering
+  % \vspace{-0.3cm}
+   {\hspace*{2.5cm}
+   \includegraphics[width=0.7\linewidth,keepaspectratio]{logos/UiO_Hovedlogo/English/UiO_Seal_A_ENG}
+   }
  }
-
-
-\date{
-  % \color{my_lightgray}
-  \scriptsize January 11, 2021}
-
-% Include all logos
-\vspace{-1.cm}
-\titlegraphic{%
-  \vspace{-0.3cm}
-  \includegraphics[width=0.5\linewidth,keepaspectratio]{logos/UiO_Hovedlogo/English/UiO_Seal_A_ENG}
-  %\includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{figures/logos/UiO_Hovedlogo/English/UiO_Seal_A_ENG}
-%   \includegraphics[width=2cm,height=2cm,keepaspectratio]{figures/logos/sorbonne2}\hspace*{1.cm}
-%   \includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{figures/logos/anr}\hspace*{1.cm}~%
-%   \includegraphics[width=2cm,height=2cm,keepaspectratio]{figures/logos/sgr}\hspace*{0.2cm}~%
-%   \includegraphics[width=1.5cm,height=1.5cm,keepaspectratio]{figures/logos/cnrs}%
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+ \frame{
+   \titlepage
+   \thispagestyle{empty}
  }
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\frame{
-  \titlepage
-  \thispagestyle{empty}
-}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
+ %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 \section{}
-\subsection{My background}
+\subsection{Credit for this talk}
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
 \begin{frame}{\setframetitle{}}
   \only<1>
   {
@@ -172,100 +151,53 @@
 
 
 
+% ---------------------------------------------------------------
+\section{Academia today}
+\subsection{A sector in growth}
+% ---------------------------------------------------------------
 
-% ---------------------------------------------------------------
-\section{Academia and coding}
-\subsection{Quality ....}
-% ---------------------------------------------------------------
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\setframetitle{}}
-  \vspace{-0.2cm}
-  \begin{columns}[t]
-    \column{.33\textwidth}
-    \centering
-    University
-    \column{.33\textwidth}
-    \centering
-    Researcher
-    \column{.33\textwidth}
-    \centering
-     Research
-  \end{columns}
+\only<1>
+{
+\vspace{-0.5cm}
+%\centering The computational Earth system sciences are to a high extent dependent on
+  %    community software %
+    \begin{columns}
+      %
+      \column{.99\textwidth}
+        \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         {\myimageShift{width=\linewidth}{illustrations/code_quality/researchers_big_countries}{Eurostats,
+             https://ec.europa.eu/eurostat/statistics-explained/index.php/R\_\%26\_D\_personnel}}
+       %% \end{figure}
+       %%     \column{.5\textwidth}
+       %%  \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         \vspace{-0.5cm}
+         {\myimage{width=\linewidth}{illustrations/code_quality/researchers_explanation}{warfighter268}}
+       \end{figure}
 
-
-  \vspace{0.2cm} \\
-  \begin{columns}[t]
-    \column{.33\textwidth}
-    \centering
-    \begin{itemize}
-    \item Teaching
-    \item Citations
-      \item Impact
-    \end{itemize}
-
-    \column{.33\textwidth}
-    \centering
-    \begin{itemize}
-    \item Creativity
-    \item Publications
-    \item Funding
-    \end{itemize}
-
-    \column{.33\textwidth}
-    \centering
-    \begin{itemize}
-    \item Innovative
-    \item Open
-    \item Reproducible
-
-    \end{itemize}
-  \end{columns}
-  %
+       %
+     \end{columns}
+}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
-\subsection{To make this happen...}
 % ---------------------------------------------------------------
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  \vspace{-0.2cm}
-  \begin{columns}[t]
-    \column{.33\textwidth}
-    \centering
-    University
-    \column{.33\textwidth}
-    \centering
-    Researcher
-    \column{.33\textwidth}
-    \centering
-    Research
-  \end{columns}
-
-  % \centering is dependent on \\
-  \vspace{2cm}
-
-   \centering  ... depend on some kind of computer resources
-
-  %
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-\subsection{The thesis}
+\subsection{Standing on the shoulders of giants}
 % ---------------------------------------------------------------
-
-
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\setframetitle{}}
+\only<1>
+{
+%\centering The computational Earth system sciences are to a high extent dependent on
+  %    community software %
     \begin{columns}
       %
       \column{.5\textwidth}
@@ -275,146 +207,362 @@
        \end{figure}
        %
      \end{columns}
-    \centering Typically, the coding done in a thesis is built on existing work
+}
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+
 % -------------------------------------------------------------
 %\section{}
-\subsection{What is good code?}
+\subsection{What is 'good' scientific software?}
 %\subsection{Common software life cycle guide}
 % -------------------------------------------------------------
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\setframetitle{}}
+  \only<1>
+  {
+    \begin{columns}[t]
+      \column{.5\textwidth}
+      \begin{itemize}
+      \item Something that works
+
+      \item Standardized
+      \item Well documented
+      \item Reusable
+      \item Maintainable
+      \end{itemize}
+      %
+      \column{.5\textwidth}
+ \begin{figure}
+        \captionsetup[subfigure]{justification=centering}
+        \centering
+        \subcaptionbox{}
+        {\includegraphics[width=\linewidth]{illustrations/code_quality/wtf}}
+      \end{figure}
+    \end{columns}
+}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+\only<1>
+{
+\centering \large In the industry academicians are known as bad coders
+}
+\only<2>
+{
+\centering \large In the industry academians are known for bad coders
+\\
+\Huge \color{my_raspberry} WHY?
+}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{The Industry}
+\subsection{Learning from the industry}
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+
+\begin{itemize}
+\item There is no such thing as a free (tech) lunch.
+
+
+
+\item How has the FAAMG-companies succeeded \footnote{\fullcite{bigTech}}?
+
+\end{itemize}
+\end{frame}
+
+
+\subsection{Developing 'good' code}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
   % \vspace{-0.2cm}
   \only<1>
   {
-    \begin{columns}[t]
-      \column{.5\textwidth}
-      \centering
-      Academia
-      \begin{itemize}
-      \item Something that works
-      \item Something that produces papers
-      \end{itemize}
-      %
-      \column{.5\textwidth}
-      %
-      \centering
-      Industry
-      \begin{itemize}
-      \item Something that works
-      \item Standardized
-      \item Well documented
-      \item Reusable
-      \item Maintainable
-      \end{itemize}
-      %
-    \end{columns}
-  }
-  \only<2>
-  {
-    \begin{columns}[t]
-      \column{.5\textwidth}
-      \centering
-      Academia
-      \begin{itemize}
-      \item Something that works
-      \item Something that produces papers
-      \end{itemize}
-      %
-      \column{.1\textwidth}
-      \color{my_raspberry}\Rightarrow
-      \column{.5\textwidth}
-      %
-      \centering
-      Industry
-      \begin{itemize}
-      \item Something that works
-      \item Standardized
-      \item Well documented
-      \item Reusable
-      \item Maintainable
-      \end{itemize}
-      %
-    \end{columns}
-    }
+ \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         {\myimage{width=0.8\linewidth}{illustrations/code_quality/development_speed_quick_hacks}{Radovan
+             Bast, adapted from "Simple Made Easy" by Rich Hickey}}
+ \end{figure}
+ }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
 
 
+\subsection{Some techniques for properly implemented}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 \begin{frame}{\setframetitle{}}
-    \begin{columns}[t]
-      \column{.5\textwidth}
-      \centering
-      Academia
-      \begin{itemize}
-      \item Something that works
-      \item Something that produces papers
-      \end{itemize}
-      %
-      \column{.1\textwidth}
-      \color{my_raspberry}\Rightarrow
-      \column{.5\textwidth}
-      %
-      \centering
-      Industry
-      \begin{itemize}
-      \item Something that works
-      \item Standardized
-      \item Well documented
-      \item Reusable
-      \item Maintainable
-      \end{itemize}
-      %
-    \end{columns}
+
+ \begin{columns}[t]
+    \column{.5\textwidth}
+
+    \begin{itemize}
+    \item Version control
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \begin{figure}
+     \subcaptionbox{How git is used}
+      {\myimage{width=0.79\linewidth}{illustrations/code_quality/git_xkcd}{https://xkcd.com/1597/}}
+%%
+     \end{figure}
+  \end{columns}
+
 \end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+%% %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+%%%%%
 
 
-
-
-
-\subsection{How to write good code?}
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  %
-  \only<1>
-  {
-   Is a long  \href{https://medium.com/@isaaclyman/steps-to-better-code-e6c3cce0c7f9}{\color{gray} discussion}. \vspace{1cm}
 
-    \\
-    I divide in: %\vspace{1cm}
+\begin{frame}{\setframetitle{}}
+
   \begin{columns}[t]
     \column{.5\textwidth}
-    \centering
-    Techniques
-    % \begin{itemize}
-    % \item Practice
-    % \item Experience
-    % \item Version control (tool)
-    % \item Strategy
-    % \end{itemize}
-    %
+
+    \begin{itemize}
+    \item Version control
+
+      \item Workflow optimization
+    \end{itemize}
+
     \column{.5\textwidth}
-    %
-    \centering
-    Tools
-    % \begin{itemize}
-    % \item Code review
-    % \item Version control
-    % \item Strategy
-    % \end{itemize}
+    \begin{figure}
+          \subcaptionbox{What happens with spaghetti code}
+       {\myimageShift{width=0.89\linewidth}{illustrations/code_quality/goto}{https://www.i-programmer.info/programming/theory/1332-goto-spaghetti-and-velociraptor.html}}
+    \end{figure}
   \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{\setframetitle{}}
+
+  \begin{columns}[t]
+    \column{.5\textwidth}
+
+    \begin{itemize}
+    \item Version control
+
+      \item Workflow optimization
+
+        \item Containerization
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \begin{figure}
+                \subcaptionbox{Impress Yoda}
+   {\myimageShift{width=0.8\linewidth}{illustrations/code_quality/dockerizing}{https://www.i-programmer.info/programming/theory/1332-goto-spaghetti-and-velociraptor.html}}
+    \end{figure}
+  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{\setframetitle{}}
+
+  \begin{columns}[t]
+    \column{.5\textwidth}
+
+    \begin{itemize}
+    \item Version control
+
+      \item Workflow optimization
+
+        \item Containerization
+
+          \item Documentation
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \begin{figure}
+          \subcaptionbox{Listen to  Morpheus}
+   {\myimageShift{width=0.8\linewidth}{illustrations/code_quality/comment-your-code}{https://www.i-programmer.info/programming/theory/1332-goto-spaghetti-and-velociraptor.html}}
+    \end{figure}
+  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\begin{frame}{\setframetitle{}}
+
+  \begin{columns}[t]
+    \column{.5\textwidth}
+
+    \begin{itemize}
+    \item Version control
+
+      \item Workflow optimization
+
+        \item Containerization
+
+          \item Documentation
+
+            \item (Modern) editor
+    \end{itemize}
+
+    \column{.5\textwidth}
+    \begin{figure}
+      \subcaptionbox{The fight of the editors}
+   {\myimageShift{width=\linewidth}{illustrations/code_quality/editor_fight}{https://i.redd.it/798myjzkwmjz.jpg}}
+    \end{figure}
+  \end{columns}
+
+\end{frame}
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+
+
+
+% ---------------------------------------------------------------
+\section{How do we get 'good' scientific software?}
+\subsection{Community mindset}
+% ---------------------------------------------------------------
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+
+ \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         {\myimage{width=0.89\linewidth}{illustrations/code_quality/mindset}{Ryan
+      Knox}}
+ \end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+
+ \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         {\myimage{width=0.89\linewidth}{illustrations/code_quality/mindset2}{Ryan
+      Knox}}
+ \end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+\subsection{Learning from the  NCAR community }
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+
+ \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         {\myimage{width=0.79\linewidth}{illustrations/code_quality/se-goal}{Ryan
+         Knox}}
+ \end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+
+ \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         {\myimage{width=0.79\linewidth}{illustrations/code_quality/se-participation}{Ryan
+         Knox}}
+ \end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+
+ \begin{figure}
+         %\subcaptionbox{Built on existing work}
+         {\myimage{width=0.79\linewidth}{illustrations/code_quality/se-organization}{Ryan
+         Knox}}
+ \end{figure}
+
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+\section{Conclusion}
+\subsection{Question}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+  \only<1>
+  {
+ %\thispagestyle{empty}
+\centering
+
+
+\Large  Best software engineering practices, why should
+academia care?
+
+}
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+\subsection{Answer}
+
+
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+  \only<1>
+  {
+\centering
+\Large  Less time spent to reach the fun stuff (do science), and ability to do
+it better
 }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -423,363 +571,5 @@
 
 
 
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-    Is a long  \href{https://medium.com/@isaaclyman/steps-to-better-code-e6c3cce0c7f9}{\color{gray} discussion}. \vspace{1cm}
-
-    \\
-    I divide in: %\vspace{1cm}
-  \begin{columns}[t]
-    \column{.5\textwidth}
-    \centering
-    Techniques
-    \begin{itemize}
-    \item Practice
-    \item Experience
-    \end{itemize}
-    %
-    \column{.5\textwidth}
-    %
-    \centering
-    Tools
-    \begin{itemize}
-    \item Code review
-    \item Version control
-    \item Strategy
-    \end{itemize}
-  \end{columns}
-  %
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-\section{Practicalities}
-\subsection{Schedule}
-
-
-\begin{frame}{\setframetitle{}}
-  \begin{columns}[t]
-    \column{.2\textwidth}
-    \centering
-    Monday 11.01.21 9.00-12.00 Introduction to scientific programming
-    % \begin{itemize}
-    % \item What is a smart technique for asking for help?
-    % \item After lunch:
-    %   (if needed) Installation help
-    % \end{itemize}
-    \column{.2\textwidth}
-    \centering
-    Tuesday 12.01.21 9.00-12.00 Individual git.
-    % \begin{itemize}
-    % \item What is version control?
-    % \item How to use version control as an individual
-    % \end{itemize}
-    \column{.2\textwidth}
-    \centering
-    Wednesday 13.01.21 9.00-12.00 Collaborative git for teams
-    % \begin{itemize}
-    % \item Forking exercise through GitHub
-    % \end{itemize}
-    \column{.2\textwidth}
-    \centering
-Thursday 14.01.21 9.00-12.00 Module based code development
-    % \begin{itemize}
-    % \item Objectives: learn the point of following established workflow standards
-    % \end{itemize}
-     \column{.2\textwidth}
-    \centering
-Friday 15.01.21 9.00-12.00 How to give and receive code reviews
-    % \begin{itemize}
-    % \item We will cover the point by doing code reviews and ​show how this can be done through GitHub.
-    % \end{itemize}
-  \end{columns}
-  \end{frame}
-
-
-
-
-\subsection{Form of workshop}
-
-
-\begin{frame}{\setframetitle{}}
-  \begin{columns}[t]
-    \column{.9\textwidth}
-    \centering
-    \begin{itemize}
-      \item Collective discussion for modern coding tools \vspace{0.25cm}
-      \item Zoom, share screen, breaks \vspace{0.25cm}
-      \item Exercises are done in smaller groups \vspace{0.25cm}
-      \item \href{https://hackmd.io/dYZPs_f9Q6mW423kzkgwsQ}{\color{gray} HackMD} for typing questions
-\end{itemize}
-  \end{columns}
-
-  \vspace{2cm}
-  Please interact with the presenter and the participants during the workshop!
-  \end{frame}
-
-
-
-
-\subsection{Further reading}
-
-\begin{frame}{\setframetitle{}}
-
-Interesting resources (CodeRefinery and others):\vspace{1cm}
-
-  \begin{columns}[t]
-    \column{.2\textwidth}
-    \centering
-      \href{https://coderefinery.github.io/testing/}{\color{gray} (Automated) testing}
-
-    \column{.2\textwidth}
-    \centering
-    \href{https://coderefinery.github.io/documentation/}{\color{gray} Documentation}
-
-    \column{.2\textwidth}
-    \centering
-    \href{https://coderefinery.github.io/reproducible-research/}{\color{gray} Reproducible research}
-
-    \column{.2\textwidth}
-    \centering
-     \href{https://towardsdatascience.com/ideal-python-environment-setup-for-data-science-cdb03a447de8}{\color{gray} Environments}
-
-  \end{columns}
-  \end{frame}
-
-
-
-
-\section{How to get help}
-\subsection{Questions}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  \only<1>
-  {
-    \begin{center}
-      \color{red}{The only stupid question .....}
-    \end{center}
-  }
-  \only<2>
-  {
-    \begin{center}
-      \color{black}{The only stupid question .....}
-    \end{center}
-
-    \newline
-
-    \begin{center}
-      \color{red}{....is the one you did not ask.}
-    \end{center}
-
-
-  }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-
-
-    \begin{center}
-      \color{black}{The only stupid question .....}
-    \end{center}
-
-    \newline
-
-    \begin{center}
-      \color{black}{....is the one you did not ask.}
-    \end{center}
-
-    \newline
-
-
-        \begin{center}
-      \color{red}{But, think about how, where, and whom you are asking for help.}
-    \end{center}
-
-
-
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-\subsection{How to not write a coding question}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  \only<1>
-  {
-    I get an error when I run ./run. Can you help me to update it so it can run?
-
-    \newline
-I’m using gfortran to compile software. After an update I get this error message:
-ld: library not found for -lSystem
-collect2: error: ld returned 1 exit status
-
-\newline
-
-I am trying to run simulations on Fram with the latest version of the CTSM´s master branch. The run failed with an error about segmentation fault. I used the same settings that I used on Saga.
-
-\newline
-
-I did what i had to and I have an awful news... I have an iteration error in the Fates hydo scheme, not segmentation fault this time. The cesm log file is attached.
-I did not have this error without biogeog= true so i will try that.
-
-  }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-\subsection{A standardized error message}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  \only<1>
-  {
-    Software: NAME\_SOFTWARE \newline
-    The software can be found here: WEB\_PAGE or GITHUB\_PAGE \newline
-    ( If applicable: I’m using this version of the software: NAME\_GIT\_BRANCH/VERSION\_OF\_SOFTWARE) \newline
-
-After typing this command I get the following error-message: COPY\_OF\_ERROR \newline
-
-I'm running the code on this machine: MY\_OPERATIVE\_SYSTEM (if UiO-machine MY\_MACHINE\_NAME)\newline
-
-I have already spent this amount of time on my problem: AMOUNT\_OF\_TIME
-
-  }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-
-\subsection{Requirements to get help from me}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  \only<1>
-  {
-    \begin{itemize}
-    \item Write a standardized error message (see slide 15)
-
-    \item Deliver a new ticket in RT
-
-    % \begin{columns}
-    %   %
-    %   \column{.5\textwidth}
-      \begin{figure}
-        \captionsetup[subfigure]{justification=centering}
-        \centering
-        %\subcaptionbox{Scientific programming}
-        {\includegraphics[width=0.99\linewidth]{illustrations/code_quality/uio_rt}}
-      \end{figure}
-
-    %   \\
-    %   \column{.5\textwidth}
-    %  \begin{figure}
-    %     \captionsetup[subfigure]{justification=centering}
-    %     \centering
-    %     \subcaptionbox{Scientific programming}
-    %     {\includegraphics[width=0.9\linewidth]{illustrations/code_quality/rt_ticket}}
-    %   \end{figure}
-    % \end{columns}
-
-    \end{itemize}
-  }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
-\subsection{Requirements to get help from me}
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  \only<1>
-  {
-    \begin{itemize}
-    \item Write a standardized error message (see slide 17)
-
-    \item Deliver a new ticket in RT
-
-    % \begin{columns}
-    %   %
-    %   \column{.5\textwidth}
-      \begin{figure}
-        \captionsetup[subfigure]{justification=centering}
-        \centering
-        %\subcaptionbox{Scientific programming}
-        {\includegraphics[width=0.9\linewidth]{illustrations/code_quality/rt_ticket}}
-      \end{figure}
-
-    \end{itemize}
-  }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-\subsection{Debugging}
-
-
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  \only<1>
-  {
-    \begin{columns}%[t]
-
-      \column{.5\textwidth}
-       Exercise:
-      Write in the \href{https://hackmd.io/dYZPs_f9Q6mW423kzkgwsQ}{\color{gray} HackMD}
-      \begin{itemize}
-      \item What is your favorite technique for debugging?
-        \end{itemize}
-
-
-     \column{.5\textwidth}
-
-     \begin{figure}
-       \centering
-       %  \subcaptionbox{"First actual case of bug being found", 1945}
-         {\myimage{width=\linewidth}{illustrations/code_quality/bug}{Naval surface warfare center, Dahlgren, Virginia}}
-       \end{figure}
-
-\end{columns}
-
-  }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-
-
-
-
-
-
 \end{document}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
