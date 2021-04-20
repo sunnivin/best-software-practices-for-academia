@@ -546,7 +546,16 @@
 }
 \def\myimage#1#2#3{\tikz\node[inner sep=0,credit={#3}]{\includegraphics[#1]{#2}};}
 
-\def\myimageCopy#1#2#3{\tikz\node[inner sep=0,credit={#3}]{\includegraphics[#1]{#2}};}
+\tikzset{creditShift/.style={
+    append after command={
+      let \p1=($(\tikzlastnode.north east)-(\tikzlastnode.north west)$) in
+      node[anchor=north east,align=right,text width=\x1,font=\footnotesize,
+        node contents={\scalebox{0.45}{\hspace{-3cm}Credit:~\textit{#1}}}, at = (\tikzlastnode.south east)]
+
+    }
+  }
+}
+\def\myimageShift#1#2#3{\tikz\node[inner sep=0,creditShift={#3}]{\includegraphics[#1]{#2}};}
 
 
 
