@@ -96,7 +96,7 @@ A Lavterskel talk \\
  \titlegraphic{
 %\centering
   % \vspace{-0.3cm}
-   {\hspace*{2.5cm}
+   {\hspace*{3cm}
    \includegraphics[width=0.7\linewidth,keepaspectratio]{logos/UiO_Hovedlogo/English/UiO_Seal_A_ENG}
    }
  }
@@ -109,7 +109,7 @@ A Lavterskel talk \\
 
 
 \section{}
-\subsection{Credit for this talk}
+\subsection{Credit}
 
 
 \begin{frame}{\setframetitle{}}
@@ -117,21 +117,17 @@ A Lavterskel talk \\
   {
     \begin{columns}
       %
-      \column{.5\textwidth}
-      \begin{figure}
-        \captionsetup[subfigure]{justification=centering}
-        \centering
-        \subcaptionbox{Theoretical physics}
-        {\myimage{width=0.45\linewidth}{illustrations/code_quality/physics}{Book my show}}
-      \end{figure}
-      \\
-      \column{.5\textwidth}
-      \begin{figure}
-        \captionsetup[subfigure]{justification=centering}
-        \centering
-        \subcaptionbox{Scientific programming}
-        {\myimage{width=0.45\linewidth}{illustrations/code_quality/female_tech}{Apple}}
-      \end{figure}
+      \column{.99\textwidth}
+      \begin{itemize}
+        \item This talked has borrowed some points from 'Community Scientific
+          Software Development' by Ryan Knox, Discussion Talk on NSF 21-549
+        \item The software engineers team of the Community Terrestrial Systems Model
+          (CTSM)-group at the National Center for Atmospheric Research (NCAR)
+          for discussions and ideas
+          \item The Research Software Engineers at Aalto University,
+            \url{https://scicomp.aalto.fi/rse/}
+          \item Consultants and engineers in Cognite, \url{https://www.cognite.com}
+        \end{itemize}
 
     \end{columns}
   }
@@ -153,7 +149,7 @@ A Lavterskel talk \\
 
 % ---------------------------------------------------------------
 \section{Academia today}
-\subsection{A sector in growth}
+\subsection{A growing sector}
 % ---------------------------------------------------------------
 
 
@@ -180,7 +176,7 @@ A Lavterskel talk \\
        \end{figure}
 
        %
-     \end{columns}
+   \end{columns}
 }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -198,15 +194,15 @@ A Lavterskel talk \\
 {
 %\centering The computational Earth system sciences are to a high extent dependent on
   %    community software %
-    \begin{columns}
+   % \begin{columns}
       %
-      \column{.5\textwidth}
+     % \column{.5\textwidth}
         \begin{figure}
          %\subcaptionbox{Built on existing work}
-         {\myimage{width=\linewidth}{illustrations/code_quality/iron}{warfighter268}}
+         {\myimage{width=0.6\linewidth}{illustrations/code_quality/iron_circle}{warfighter268}}
        \end{figure}
        %
-     \end{columns}
+    % \end{columns}
 }
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -230,9 +226,12 @@ A Lavterskel talk \\
       \item Something that works
 
       \item Standardized
-      \item Well documented
-      \item Reusable
-      \item Maintainable
+      \item Understandable
+      \item Reproducible \footnote{\fullcite{reproducibility}}
+      \item
+\renewcommand{\thefootnote}{\fnsymbol{footnote}}
+Maintainable \footnote{Common estimate: spending 20\% of the developing time
+        for maintenance work }
       \end{itemize}
       %
       \column{.5\textwidth}
@@ -256,7 +255,8 @@ A Lavterskel talk \\
 \begin{frame}{\setframetitle{}}
 \only<1>
 {
-\centering \large In the industry academicians are known as bad coders
+\centering \large The industry know academicians as bad
+coders \footnote{\fullcite{academiaCode}}, \footnote{\fullcite{industryLesson2}}, \footnote{\fullcite{industryLesson3}}, \footnote{\fullcite{academiaCodeQuality}}
 }
 \only<2>
 {
@@ -269,7 +269,25 @@ A Lavterskel talk \\
 
 
 \section{The Industry}
-\subsection{Learning from the industry}
+
+\subsection{Developing 'good' code}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+  % \vspace{-0.2cm}
+  \only<1>
+  {
+\begin{figure}
+         %\subcaptionbox{Built on existing work}
+{\myimage{width=0.8\linewidth}{illustrations/code_quality/development_speed_quick_hacks}{Radovan
+          Bast, adapted from "Simple Made Easy" by Rich Hickey}}
+ \end{figure}
+ }
+ \end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
+\subsection{Learning from success}
 
 
 
@@ -278,35 +296,23 @@ A Lavterskel talk \\
 \begin{frame}{\setframetitle{}}
 
 \begin{itemize}
-\item There is no such thing as a free (tech) lunch.
 
-
-
-\item How has the FAAMG-companies succeeded \footnote{\fullcite{bigTech}}?
+\item How has FAAMG  succeeded \footnote{\fullcite{bigTech}}?
+\begin{itemize}
+\item 'There is no such thing as a free (tech) lunch'
+\end{itemize}
+\item Common strategies
+\begin{itemize}
+\item Requirements to become a 'Data Scientist' \footnote{\fullcite{finnSearch}}
+\end{itemize}
 
 \end{itemize}
 \end{frame}
 
 
-\subsection{Developing 'good' code}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
-\begin{frame}{\setframetitle{}}
-  % \vspace{-0.2cm}
-  \only<1>
-  {
- \begin{figure}
-         %\subcaptionbox{Built on existing work}
-         {\myimage{width=0.8\linewidth}{illustrations/code_quality/development_speed_quick_hacks}{Radovan
-             Bast, adapted from "Simple Made Easy" by Rich Hickey}}
- \end{figure}
- }
-\end{frame}
-%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-
-
-\subsection{Some techniques for properly implemented}
+%\subsection{Some techniques for properly implemented}
 
 
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
@@ -449,6 +455,21 @@ A Lavterskel talk \\
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+\begin{frame}{\setframetitle{}}
+  % \vspace{-0.2cm}
+ \only<1>
+  {
+ \begin{figure}
+         \subcaptionbox{When communication goes wrong}
+         {\myimage{width=\linewidth}{illustrations/code_quality/over_engineering}{https://www.action-engineering.com/blog/agile-acceptance-criteria/}}
+ \end{figure}
+ }
+\end{frame}
+%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
+
 
 
 
@@ -486,6 +507,8 @@ A Lavterskel talk \\
 
 \end{frame}
 %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
+
 
 
 
@@ -561,7 +584,7 @@ academia care?
   \only<1>
   {
 \centering
-\Large  Less time spent to reach the fun stuff (do science), and ability to do
+\Large  Less time spent before reaching the fun stuff (do science), and the ability to do
 it better
 }
 \end{frame}

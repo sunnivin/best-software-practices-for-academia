@@ -135,7 +135,8 @@
 %Add latex_code to the document
 
 
-
+% Cite several sources
+\usepackage{cite}
 
 
 %\usepackage[marginparwidth=3cm]{geometry}
@@ -589,23 +590,6 @@
     \hyperlink{questions}{\beamerreturnbutton{Return}}%
     \vskip2ex\end{frame}}
 
-
-
-% %Redefine the footnote command to have a non-numbering option
-% \let\svthefootnote\thefootnote
-% \textheight 1in
-% \newcommand\blankfootnote[1]{%
-%   \let\thefootnote\relax\footnotetext{#1}%
-%   \let\thefootnote\svthefootnote%
-% }
-% \let\svfootnote\footnote
-% \renewcommand\footnote[2][?]{%
-%   \if\relax#1\relax%
-%     \blankfootnote{#2}%
-%   \else%
-%     \if?#1\svfootnote{#2}\else\svfootnote[#1]{#2}\fi%
-%   \fi
-% }
 
 
 %Add text in bottom of slide:
