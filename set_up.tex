@@ -143,104 +143,21 @@
 %\usepackage{marginnote}
 \DeclareMathAlphabet{\mymathbb}{U}{bbold}{m}{n}
 
-%To set the usetheme and the colors
-%\usetheme{Madrid}
-%\usetheme{default}
-
-%Set the colors
-%\usecolortheme{rose}
-% color themes: albatross, beaver, beetle, crane, default, dolphin, dov, fly, lily, orchid, rose, seagull, seahorse, sidebartab, structure, whale, wolverine
-
-%Set the text style
-%\usefonttheme{serif}
-% font themes: default, professionalfonts, serif, structurebold, structureitalicserif, structuresmallcapsserif
-
-%If you want to change the text colors again
-% \setbeamercolor{normal text}{fg=black,bg=white}
-% \setbeamercolor{pagenumber}{fg=pagenumbercolor}
-% \setbeamercolor{alerted text}{fg=red}
-% \setbeamercolor{example text}{fg=blue!50!white}
-% \setbeamercolor{structure}{fg=blue!70!white}
-% \setbeamercolor{background canvas}{parent=normal text}
-% \setbeamercolor{background}{parent=background canvas}
-% \setbeamercolor{framesource}{fg=black}
-% \setbeamerfont{framesource}{size=\small}
-
-%\input{math_setup.tex}
-
-%Add pagenumering
-% \beamertemplatenavigationsymbolsempty
-% \addtobeamertemplate{navigation symbols}{}{ \hspace{1em}    \usebeamerfont{footline}%
-%   \insertframenumber / \inserttotalframenumber }
-
-%% Bibliography
-%\usepackage[backend=biber,style=ieee]{biblatex}
-%\bibliography{manual}
-
-% % To show references on the same slide:
-% \usepackage[backend=bibtex]{biblatex}
-
-% \makeatletter
-% \def\blx@maxline{77}
-% \makeatother
-
-% % Resset footnote to be showed on each slide
-%  \let\oldfootnote\footnote
-% \renewcommand\footnote[1][]{\oldfootnote[frame,#1]}
-% \makeatother
-
-% % Use square-parenthesis as mark
-% \makeatletter
-% \renewcommand\@makefnmark{\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
-% \renewcommand\@makefntext[1]{\fontsize{4}{5}\selectfont {\usebeamercolor[fg]{footnote
-%       mark}\usebeamerfont*{footnote
-%       mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
-% \makeatother
-
-
-
-% To show references on the same slide:
+%% To show references on the same slide:
 \usepackage[backend=bibtex]{biblatex}
 
+% Maximum length of reference
 \makeatletter
 \def\blx@maxline{77}
-\makeatother
 
-% Resset footnote to be showed on each slide
- \let\oldfootnote\footnote
+% Reset footnote to be shown on each slide
+\let\oldfootnote\footnote
 \renewcommand\footnote[1][]{\oldfootnote[frame,#1]}
+
+% Use square parenthesis as mark
+\renewcommand\@makefnmark{\hbox{\textsuperscript{[\@thefnmark]}}}
+\renewcommand\@makefntext[1]{\fontsize{4}{5}\selectfont {\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
 \makeatother
-
-% Use square-parenthesis as mark
-\makeatletter
-\renewcommand\@makefnmark{\hbox{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}
-\renewcommand\@makefntext[1]{\fontsize{4}{5}\selectfont {\usebeamercolor[fg]{footnote
-      mark}\usebeamerfont*{footnote
-      mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
-\makeatother
-
-
-
-% \let\svthefootnote\thefootnote
-% \textheight 1in
-% \newcommand\blankfootnote[1]{%
-%   \let\thefootnote\relax\footnotetext{#1}%
-%   \let\thefootnote\svthefootnote%
-% }
-
-
-
-
-
-% % Use square-parenthesis as mark
-% \makeatletter
-% \renewcommand\@makefnmark{\hbox{\@textsuperscript{\usebeamercolor[fg]{footnote mark}\usebeamerfont*{footnote mark}[\@thefnmark]}}}
-% \renewcommand\@makefntext[1]{\@textsuperscript{\usebeamercolor[fg]{footnote
-%       mark}\usebeamerfont*{footnote
-%       mark}[\@thefnmark]}\enspace\usebeamerfont*{footnote} #1}
-% \makeatother
-
-
 
 % --- Add predefined colors
 \usepackage{xcolor}
@@ -611,3 +528,5 @@
 
 % --- Bold math symbol
 \usepackage{bm}
+
+
